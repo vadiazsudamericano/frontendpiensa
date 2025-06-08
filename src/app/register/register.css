@@ -1,0 +1,89 @@
+.full-screen-container {
+  background-color: #c9f2f5;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+  text-align: center;
+  color: #005663;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.full-screen-container h2 {
+  color: #005663;
+  margin-bottom: 1.5rem;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: oblique;
+}
+
+.full-screen-container label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: #005663;
+}
+
+.full-screen-container input[type="email"],
+.full-screen-container input[type="password"] {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 0.8rem;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  background-color: #FFF0F0;
+  color: #000000;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.full-screen-container input:focus {
+  border-color: #000000;
+  outline: none;
+}
+
+.full-screen-container button[type="submit"] {
+  width: 100%;
+  background-color: #4f8d92;
+  color: #ffffff;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.full-screen-container button[type="submit"]:disabled {
+  background-color: #000000bd;
+  cursor: not-allowed;
+}
+
+.full-screen-container button[type="submit"]:hover:not(:disabled) {
+  background-color: #062222;
+}
+
+.full-screen-container .error-message {
+  color: #005663;
+  font-weight: bold;
+  font-size: 0.85rem;
+  margin-bottom: 0.8rem;
+  text-align: left;
+}
+
+.full-screen-container .link-button {
+  margin-top: 1rem;
+  background: none;
+  border: none;
+  color: #002a28;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.full-screen-container .link-button:hover {
+  color: #003e4b;
+}
