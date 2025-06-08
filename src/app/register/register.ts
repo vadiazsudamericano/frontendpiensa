@@ -21,11 +21,11 @@ export class RegisterComponent {
   register() {
     const user = { username: this.username, password: this.password };
     this.http.post(`${environment.apiUrl}/users/register`, user).subscribe({
-      next: (res) => {
+      next: () => {
         alert('Usuario registrado con éxito');
         this.router.navigate(['/']);
       },
-      error: (err) => {
+      error: () => {
         alert('Error al registrar usuario');
       }
     });

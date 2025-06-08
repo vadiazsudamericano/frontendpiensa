@@ -1,11 +1,48 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 .full-screen-container {
   background-color: #c9f2f5;
-  padding: 2rem 3rem;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem 3rem 2rem 3rem; /* menos padding arriba */
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   text-align: center;
   color: #005663;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.full-screen-container {
+  background-color: #c9f2f5;
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem 3rem;
+  box-sizing: border-box;
+  border-radius: 0;
+  box-shadow: none;
+  text-align: center;
+  color: #005663;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  /* Flexbox para centrar vertical y horizontal */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 120px; /* Ajusta el tamaño del logo */
+  height: auto;
+  margin-bottom: 2rem;
 }
 
 .full-screen-container h2 {
@@ -13,77 +50,94 @@
   margin-bottom: 1.5rem;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-style: oblique;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.full-screen-container form {
+  width: 320px; /* Ancho fijo para el formulario */
 }
 
 .full-screen-container label {
   display: block;
   text-align: left;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
   font-weight: 600;
   color: #005663;
+  font-size: 1rem;
 }
 
+.full-screen-container input[type="text"],
 .full-screen-container input[type="email"],
 .full-screen-container input[type="password"] {
   width: 100%;
-  padding: 0.6rem 0.8rem;
-  margin-bottom: 0.8rem;
-  border: 2px solid #ffffff;
-  border-radius: 8px;
-  background-color: #FFF0F0;
-  color: #000000;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.2rem;
+  border: 2px solid #a7d8de;
+  border-radius: 12px;
+  background-color: #e9f8fb;
+  color: #003845;
+  font-size: 1.1rem;
+  font-weight: 500;
+  box-shadow: inset 2px 2px 6px rgba(255, 255, 255, 0.8);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.full-screen-container input:focus {
-  border-color: #000000;
+.full-screen-container input[type="text"]:focus,
+.full-screen-container input[type="email"]:focus,
+.full-screen-container input[type="password"]:focus {
+  border-color: #005663;
+  box-shadow: 0 0 8px #007a8a;
   outline: none;
+  background-color: #ffffff;
 }
 
 .full-screen-container button[type="submit"] {
   width: 100%;
-  background-color: #4f8d92;
+  background-color: #007a8a;
   color: #ffffff;
   border: none;
-  padding: 0.8rem;
-  border-radius: 8px;
-  font-size: 1.1rem;
+  padding: 0.9rem;
+  border-radius: 12px;
+  font-size: 1.2rem;
   cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  font-weight: 700;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
   margin-top: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 122, 138, 0.5);
 }
 
 .full-screen-container button[type="submit"]:disabled {
-  background-color: #000000bd;
+  background-color: #5a8a91;
   cursor: not-allowed;
+  box-shadow: none;
 }
 
 .full-screen-container button[type="submit"]:hover:not(:disabled) {
-  background-color: #062222;
+  background-color: #005663;
+  box-shadow: 0 6px 15px rgba(0, 86, 99, 0.7);
 }
 
 .full-screen-container .error-message {
-  color: #005663;
-  font-weight: bold;
-  font-size: 0.85rem;
-  margin-bottom: 0.8rem;
+  color: #d9534f;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
   text-align: left;
 }
 
 .full-screen-container .link-button {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   background: none;
   border: none;
-  color: #002a28;
+  color: #005663;
   cursor: pointer;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-decoration: underline;
   transition: color 0.3s ease;
 }
 
 .full-screen-container .link-button:hover {
-  color: #003e4b;
+  color: #003844;
 }
