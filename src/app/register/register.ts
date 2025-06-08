@@ -13,13 +13,13 @@ import { environment } from '../../environments/environment';
   imports: [CommonModule, FormsModule, HttpClientModule]
 })
 export class RegisterComponent {
-  email = '';
+  username = '';
   password = '';
 
   constructor(private router: Router, private http: HttpClient) {}
 
   register() {
-    const user = { email: this.email, password: this.password };
+    const user = { username: this.username, password: this.password };
     this.http.post(`${environment.apiUrl}/users/register`, user).subscribe({
       next: (res) => {
         alert('Usuario registrado con éxito');

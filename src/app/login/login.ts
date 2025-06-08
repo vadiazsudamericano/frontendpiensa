@@ -13,24 +13,20 @@ import { environment } from '../../environments/environment';
   imports: [CommonModule, FormsModule, HttpClientModule]
 })
 export class LoginComponent {
-  email = '';
+  username = '';
   password = '';
 
   constructor(private router: Router, private http: HttpClient) {}
 
   login() {
-    const user = { email: this.email, password: this.password };
-
-    this.http.post<{ success: boolean }>(`${environment.apiUrl}/auth/login`, user).subscribe({
-      next: (res) => {
-        if (res.success) {
-          this.router.navigate(['/historial']);
-        } else {
-          alert('Credenciales incorrectas');
-        }
+    const credentials = { username: this.username, password: this.password };
+    this.http.post(`${environment.apiUrl}/auth/login`, credentials).subscribe({
+      next: () => {
+        alert('Inicio de sesión exitoso');
+        this.router.navigate(['/historial']);
       },
       error: () => {
-        alert('Error en el servidor o credenciales inválidas');
+        alert('Usuario o contraseña incorrectos');
       }
     });
   }
