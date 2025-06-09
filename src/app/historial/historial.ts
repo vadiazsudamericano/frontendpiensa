@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-historial',
-  templateUrl: './historial.component.html'
+  templateUrl: './historial.html'
 })
 export class HistorialComponent implements OnInit {
   fotos: any[] = [];
