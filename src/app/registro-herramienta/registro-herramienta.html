@@ -1,0 +1,33 @@
+<h2>Registro de Esterilización</h2>
+
+<form (ngSubmit)="guardarRegistro()">
+  <label>Herramienta:</label>
+  <select [(ngModel)]="herramientaSeleccionada" name="herramienta" required>
+    <option *ngFor="let herramienta of herramientas" [value]="herramienta">{{ herramienta }}</option>
+  </select>
+
+  <label>Temperatura (°C):</label>
+  <input type="number" [(ngModel)]="temperatura" name="temperatura" required (input)="calcularEstado()" />
+
+  <p>Estado: <strong>{{ estado }}</strong></p>
+
+  <button type="submit">Guardar registro</button>
+</form>
+
+<hr>
+
+<h3>Historial</h3>
+<table border="1">
+  <tr>
+    <th>Herramienta</th>
+    <th>Temperatura</th>
+    <th>Estado</th>
+    <th>Fecha</th>
+  </tr>
+  <tr *ngFor="let r of registros">
+    <td>{{ r.herramienta }}</td>
+    <td>{{ r.temperatura }}°C</td>
+    <td>{{ r.estado }}</td>
+    <td>{{ r.fecha | date:'short' }}</td>
+  </tr>
+</table>
